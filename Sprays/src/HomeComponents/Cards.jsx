@@ -1,6 +1,6 @@
 import React from 'react'
 import { CtaButton } from '../Components/CtaButton'
-import { CtaButton2 } from '../Components/CtaButton2'
+import { CtaButtonWhite } from '../Components/CtaButtonWhite'
 
 export const Cards = () => {
     return (
@@ -15,7 +15,7 @@ export const Cards = () => {
                 </div>
                 <div className="absolute bottom-5 left-5">
 
-                    <CtaButton2
+                    <CtaButtonWhite
                         text='Check More Products'
                     />
                 </div>
@@ -32,7 +32,7 @@ export const Cards = () => {
                     </div>
                     <div className="absolute bottom-5 left-5">
 
-                        <CtaButton2
+                        <CtaButtonWhite
                             text='Check More Products'
                         />
                     </div>
@@ -48,7 +48,7 @@ export const Cards = () => {
                     </div>
                     <div className="absolute bottom-5 left-5">
 
-                        <CtaButton2
+                        <CtaButtonWhite
                             text='Check More Products'
                         />
                     </div>

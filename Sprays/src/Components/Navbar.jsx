@@ -6,7 +6,7 @@ export const Navbar = () => {
     const [curOpen, setCurOpen] = useState(false);
 
     return (
-        <div className='bg-black w-full flex flex-col '>
+        <div className='bg-black w-full flex flex-col sticky top-0 z-10'>
             <div className="max-w-6xl mx-auto w-full flex py-3 text-white items-center justify-between border-b border-white">
                 <span className='font-medium'>
                     Monday - Friday 8:00 AM - 9:00 PM
@@ -79,7 +79,7 @@ export const Navbar = () => {
                         }
                     </div>
                     <NavLink>Faq</NavLink>
-                    <NavLink>About Us</NavLink>
+                    <NavLink to='/about'>About Us</NavLink>
                 </div>
             </div>
             <div className="max-w-6xl mx-auto w-full py-3 flex items-center justify-between text-white">
@@ -91,10 +91,10 @@ export const Navbar = () => {
                         <NavLink to='/'>
                             Home
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/about'>
                             About
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/contact'>
                             Contact
                         </NavLink>
                         <NavLink to='/'>

@@ -6,61 +6,12 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Sprays } from '../Components/AllProducts';
+
 export const Explore = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
-    const Sprays = [
-        {
-            id: 1,
-            name: "Carlisle Eau De Parfum",
-            price: "25",
-        },
-        {
-            id: 2,
-            name: "Althair Eau De Parfum",
-            price: "20",
-        },
-        {
-            id: 3,
-            name: "Pegasus Eau De Parfum",
-            price: "20",
-        },
-        {
-            id: 4,
-            name: "Herod Eau De parfum",
-            price: "10",
-        },
-        {
-            id: 5,
-            name: "Greenley Eau  De Parfum",
-            price: "20",
-        },
-        {
-            id: 1,
-            name: "Carlisle Eau De Parfum",
-            price: "25",
-        },
-        {
-            id: 2,
-            name: "Althair Eau De Parfum",
-            price: "20",
-        },
-        {
-            id: 3,
-            name: "Pegasus Eau De Parfum",
-            price: "20",
-        },
-        {
-            id: 4,
-            name: "Herod Eau De parfum",
-            price: "10",
-        },
-        {
-            id: 5,
-            name: "Greenley Eau  De Parfum",
-            price: "20",
-        },
-    ];
+
     return (
         <div className='max-w-6xl w-full mx-auto py-15 flex flex-col gap-10'>
             <div className="w-full flex justify-between items-center">

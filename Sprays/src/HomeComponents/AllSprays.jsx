@@ -5,62 +5,11 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import { Sprays } from '../Components/AllProducts';
 export const AllSprays = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
-    const Sprays = [
-        {
-            id: 1,
-            name: "Carlisle Eau De Parfum",
-            price: "25",
-        },
-        {
-            id: 2,
-            name: "Althair Eau De Parfum",
-            price: "20",
-        },
-        {
-            id: 3,
-            name: "Pegasus Eau De Parfum",
-            price: "20",
-        },
-        {
-            id: 4,
-            name: "Herod Eau De parfum",
-            price: "10",
-        },
-        {
-            id: 5,
-            name: "Greenley Eau  De Parfum",
-            price: "20",
-        },
-        {
-            id: 1,
-            name: "Carlisle Eau De Parfum",
-            price: "25",
-        },
-        {
-            id: 2,
-            name: "Althair Eau De Parfum",
-            price: "20",
-        },
-        {
-            id: 3,
-            name: "Pegasus Eau De Parfum",
-            price: "20",
-        },
-        {
-            id: 4,
-            name: "Herod Eau De parfum",
-            price: "10",
-        },
-        {
-            id: 5,
-            name: "Greenley Eau  De Parfum",
-            price: "20",
-        },
-    ];
+
     return (
         <>
             <div className='flex flex-col gap-3 max-w-6xl mx-auto w-full py-10 relative'>
@@ -70,7 +19,6 @@ export const AllSprays = () => {
                 </span>
             </div>
             <div className="relative group">
-
                 <div className="flex absolute px-5 z-10 justify-between top-1/2 -translate-y-1/2 w-full gap-3 mb-4 opacity-0 group-hover:opacity-100 transition duration-300">
                     <button ref={prevRef} className="cursor-pointer px-3 py-2 bg-black rounded-lg text-white hover:text-white shadow hover:opacity-80  transition">
                         <i className="bi bi-arrow-left"></i>
@@ -80,7 +28,6 @@ export const AllSprays = () => {
                     </button>
                 </div>
                 <Swiper
-
                     modules={[Navigation]}
                     loop={true}
                     slidesPerView={5}
