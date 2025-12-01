@@ -8,7 +8,7 @@ export const Terms = () => {
                 pagename='Terms & Condition'
                 para='There are significant differences between the EU data protection and US data privacy laws. These standards must be met not only by businesses operating in the EU but also by any organization that transfers personal information collected concerning citizens of the EU.'
             />
-            <div className="flex flex-col gap-5 py-15 max-w-6xl mx-auto w-full">
+            <div className="flex flex-col gap-5 py-15 max-w-6xl mx-auto w-full  max-lg:px-5">
                 <ol className='list-decimal flex flex-col gap-8'>
                     <div className='flex flex-col gap-3'>
                         <li className='mitr font-medium text-xl ml-5'>Genral Conditions</li>

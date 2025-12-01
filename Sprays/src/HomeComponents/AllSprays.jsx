@@ -12,13 +12,13 @@ export const AllSprays = () => {
 
     return (
         <>
-            <div className='flex flex-col gap-3 max-w-6xl mx-auto w-full py-10 relative'>
+            <div className='flex flex-col gap-3 max-w-6xl mx-auto w-full py-10 relative max-lg:px-5'>
 
                 <span className='text-4xl font-medium mitr'>
                     Transforming Surfaces with Spray Mastery
                 </span>
             </div>
-            <div className="relative group">
+            <div className="relative group ">
                 <div className="flex absolute px-5 z-10 justify-between top-1/2 -translate-y-1/2 w-full gap-3 mb-4 opacity-0 group-hover:opacity-100 transition duration-300">
                     <button ref={prevRef} className="cursor-pointer px-3 py-2 bg-black rounded-lg text-white hover:text-white shadow hover:opacity-80  transition">
                         <i className="bi bi-arrow-left"></i>
@@ -32,6 +32,7 @@ export const AllSprays = () => {
                     loop={true}
                     slidesPerView={5}
                     spaceBetween={20}
+                    centeredSlides={true}
                     navigation={{
                         prevEl: prevRef.current,
                         nextEl: nextRef.current,
@@ -39,6 +40,17 @@ export const AllSprays = () => {
                     onBeforeInit={(swiper) => {
                         swiper.params.navigation.prevEl = prevRef.current;
                         swiper.params.navigation.nextEl = nextRef.current;
+                    }}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1.5,
+                        },
+                        768: {
+                            slidesPerView: 2.5,
+                        },
+                        1025: {
+                            slidesPerView: 5,
+                        },
                     }}
                 >
                     {Sprays.map((spray) => (

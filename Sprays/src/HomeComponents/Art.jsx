@@ -9,10 +9,10 @@ export const Art = () => {
                 backgroundImage: "url('/images/bg2.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "top",
-                height: "700px",
+              
                 width: "100%",
             }}
-            className='my-10 flex flex-col justify-center items-center gap-3'
+            className='my-10 flex flex-col justify-center h-[700px] max-lg:h-[400px] items-center gap-3'
         >
             <Heading
                 heading='The Science and Art of Sprays'

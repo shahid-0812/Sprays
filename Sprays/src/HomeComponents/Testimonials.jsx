@@ -40,7 +40,7 @@ export const Testimonials = () => {
         },
     ];
     return (
-        <div className='flex flex-col max-w-6xl mx-auto w-full gap-3 py-15'>
+        <div className='flex flex-col max-w-6xl mx-auto w-full gap-3 py-15 max-lg:px-5'>
             <h1 className='text-5xl font-medium mitr'>Testimonials</h1>
             <div className="relative group">
                 <div className="flex absolute z-10 justify-between top-1/2 -translate-y-1/2 w-full gap-3 mb-4 opacity-0 group-hover:opacity-100 transition duration-300">
@@ -64,6 +64,18 @@ export const Testimonials = () => {
                         swiper.params.navigation.prevEl = prevRef.current;
                         swiper.params.navigation.nextEl = nextRef.current;
                     }}
+                    breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                            },
+                            1025: {
+                                slidesPerView: 2,
+                            },
+                        }}
+                    
                 >
                     {Reviws.map((item) => (
                         <SwiperSlide key={item.id}>

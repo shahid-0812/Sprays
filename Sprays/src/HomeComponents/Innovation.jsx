@@ -32,7 +32,7 @@ export const Innovation = () => {
         },
     ];
     return (
-        <div className="flex flex-col max-w-6xl mx-auto items-center gap-5 py-15">
+        <div className="flex flex-col max-w-6xl mx-auto items-center gap-5 py-15 max-lg:px-5">
             <Heading
                 heading='Revolutionizing Innovation and Practicality'
                 span='From creating backgrounds in mixed media artworks to achieving unique patterns in abstract paintings, sprays offer a modern twist to artistic expression.'
@@ -62,6 +62,17 @@ export const Innovation = () => {
                         swiper.params.navigation.prevEl = prevRef.current;
                         swiper.params.navigation.nextEl = nextRef.current;
                     }}
+                    breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                            },
+                            1025: {
+                                slidesPerView: 4,
+                            },
+                        }}
                 >
                     {Card.map((item) => (
                         <SwiperSlide key={item.id}>

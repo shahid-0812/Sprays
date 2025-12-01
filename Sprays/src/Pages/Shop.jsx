@@ -400,7 +400,7 @@ export const Shop = () => {
                         {
                             Sprays.map((item) => (
 
-                                <div className='w-[32%]'>
+                                <div className='w-[32%] max-lg:w-[48%] max-sm:w-full'>
                                     <SprayCard
                                         img={`/images/${item.id}.webp`}
                                         img2={`/images/${item.id}-${item.id}.webp`}

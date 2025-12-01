@@ -10,7 +10,7 @@ export const Shipping = () => {
 
 '
             />
-            <div className="max-w-6xl mx-auto w-full flex flex-col gap-8 py-15">
+            <div className="max-w-6xl mx-auto w-full flex flex-col gap-8 py-15  max-lg:px-5">
                 <span>
                     Our policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately we can’t offer you a refund or exchange.<br />
                     <br />

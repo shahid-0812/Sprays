@@ -3,12 +3,12 @@ import { PageBanner } from '../Components/PageBanner'
 
 export const Privacy = () => {
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col '>
             <PageBanner
                 pagename='Privacy Policy'
                 span='There are significant differences between the EU data protection and US data privacy laws. These standards must be met not only by businesses operating in the EU but also by any organization that transfers personal information collected concerning citizens of the EU.'
             />
-            <div className="max-w-6xl mx-auto w-full flex flex-col gap-8 py-15">
+            <div className="max-w-6xl mx-auto w-full flex flex-col gap-8 py-15 max-lg:px-5">
                 <div className="flex flex-col gap-5">
                     <h1 className='mitr text-5xl'>Policy Privacy</h1>
                     <span className="font-medium">

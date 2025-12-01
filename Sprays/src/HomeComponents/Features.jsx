@@ -3,7 +3,7 @@ import { CtaButton } from '../Components/CtaButton'
 
 export const Features = () => {
     return (
-        <div className='flex items-center gap-5 justify-between max-w-6xl mx-auto w-full py-15'>
+        <div className='flex items-center gap-5 justify-between max-w-6xl mx-auto w-full py-15 max-lg:px-5'>
             <div className="flex flex-col  gap-3 flex-1 w-full items-end">
                 <h1 className='text-xl font-bold '>
                     Power, and Practicality<br />

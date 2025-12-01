@@ -4,7 +4,7 @@ import { CtaButton } from '../Components/CtaButton'
 
 export const Dynamics = () => {
     return (
-        <div className='max-w-6xl mx-auto w-full flex items-center justify-between py-10'>
+        <div className='max-w-6xl mx-auto w-full flex items-center justify-between py-10 max-lg:px-5 max-sm:flex-col'>
             <div className="flex flex-col gap-5 w-full">
                 <Heading
                     heading='The World of Spray Techniques'

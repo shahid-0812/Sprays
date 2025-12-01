@@ -13,12 +13,13 @@ export const Unique = () => {
     const nextRef = useRef(null);
 
     return (
-        <div className='max-w-6xl mx-auto w-full flex justify-between gap-10 py-10'>
-            <div className="w-1/2 flex flex-col gap-5">
+        <div className='max-w-6xl mx-auto w-full flex justify-between gap-10 py-10 max-lg:flex-col max-lg:px-5'>
+            <div className="w-1/2 flex flex-col gap-5 max-lg:w-full max-lg:text-center max-lg:items-center">
                 <Heading
                     show='hidden'
                     heading='Unique perfumes for women and men'
                     span='The applications of sprays span a wide spectrum, catering to industrial, artistic, medicinal, and everyday needs.'
+                    center='max-lg:items-center'
                 />
                 <div className="flex items-center gap-2">
                     <button className='hover:bg-black border w-fit  text-black font-semibold rounded-full text-sm px-6 py-2 cursor-pointer bg-transparent hover:border-black hover:text-white transition duration-500'>
@@ -33,7 +34,7 @@ export const Unique = () => {
                     text='Check More Products'
                 />
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 max-lg:w-full">
                 <div className="relative group">
 
                     <div className="flex absolute z-10 justify-between top-1/2 -translate-y-1/2 w-full gap-3 mb-4 opacity-0 group-hover:opacity-100 transition duration-300">
