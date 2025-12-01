@@ -30,7 +30,7 @@ export const Innovation = () => {
             id: 5,
             name: "the Scent Haven",
         },
-    ]
+    ];
     return (
         <div className="flex flex-col max-w-6xl mx-auto items-center gap-5 py-15">
             <Heading

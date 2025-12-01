@@ -25,7 +25,7 @@ export const SprayCard = ({ img, name, price, img2 }) => {
             </div>
             <div className="flex flex-col gap-2 p-5">
                 <span>Rihanna</span>
-                <h1 className='text-xl mitr font-thin whitespace-nowrap'>{name}</h1>
+                <h1 className='text-xlmitr font-thin text-lg'>{name}</h1>
                 <div className="flex items-center gap-3">
                     <span>Weight:</span>
                     <select name="" id="" className='border rounded-lg w-full py-1 px-2'>

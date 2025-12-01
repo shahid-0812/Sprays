@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { NavLink } from 'react-router-dom';
 export const Navbar = () => {
     const [langOpen, setLangOpen] = useState(false);
     const [curOpen, setCurOpen] = useState(false);
+    const [pageOpen, setPageOpen] = useState(false);
+    const hover = 'hover:text-[#ed5548] transition semibold';
 
     return (
         <div className='bg-black w-full flex flex-col sticky top-0 z-10'>
@@ -82,7 +84,7 @@ export const Navbar = () => {
                     <NavLink to='/about'>About Us</NavLink>
                 </div>
             </div>
-            <div className="max-w-6xl mx-auto w-full py-3 flex items-center justify-between text-white">
+            <div className="max-w-6xl mx-auto w-full  flex items-center justify-between text-white">
                 <div className="flex items-center">
                     <div className='border-r border-white pr-10'>
                         <img src="logo.webp" alt="" />
@@ -97,9 +99,54 @@ export const Navbar = () => {
                         <NavLink to='/contact'>
                             Contact
                         </NavLink>
-                        <NavLink to='/'>
+                        <NavLink to='/shop'>
+                            Shop
+                        </NavLink>
+                        <NavLink to='/blogs'>
                             Blog
                         </NavLink>
+                        <div onMouseEnter={() => setPageOpen(true)} onMouseLeave={() => setPageOpen(false)} className="relative cursor-pointer  py-8">
+                            <span className={hover}>Pages
+
+                                <i
+                                    className={`bi bi-chevron-down ml-2 inline-block transform transition-transform duration-300 ${pageOpen ? "rotate-180" : "rotate-0"
+                                        }`}
+                                ></i>
+                            </span>
+                            <AnimatePresence>
+                                {pageOpen && <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{
+                                        duration: 0.4,
+                                        ease: [0.2, 0, 0.2, 1]  // fast start, slow end
+                                    }}
+                                    className="absolute left-25 -translate-x-1/2 bg-black px-5  shadow-lg capitalize rounded-lg w-50 mt-5  flex flex-col gap-1 py-3 overflow-hidden"
+                                >
+                                    <NavLink to='/contact'>
+                                        Contact
+                                    </NavLink>
+                                    <NavLink to="/about" >
+                                        About Us
+                                    </NavLink>
+                                    <NavLink to='/FAQs'>
+                                        FAQs
+                                    </NavLink>
+                                    <NavLink to='/privacy'>
+                                        Privacy Policy
+                                    </NavLink>
+                                    <NavLink to='/shipping'>
+                                        Shipping & Policy
+                                    </NavLink>
+                                    <NavLink to='/terms'>
+                                        Terms & Conditions
+                                    </NavLink>
+                                </motion.div>
+                                }
+                            </AnimatePresence>
+                        </div>
+
                     </div>
                 </div>
                 <div className="flex items-center gap-3">
