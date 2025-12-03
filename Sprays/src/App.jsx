@@ -1,5 +1,5 @@
 import { Navbar } from "./Components/Navbar"
-import { BrowserRouter, Routes, Route, } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation, } from 'react-router-dom'
 import { Home } from "./Pages/Home"
 import { ContactUs } from "./Pages/ContactUs"
 import { AboutUs } from "./Pages/AboutUs"
@@ -11,6 +11,10 @@ import { Shop } from "./Pages/Shop"
 import { Blogs } from "./Pages/Blogs"
 import { BlogDetails } from "./Pages/BlogDetails"
 import { ProductDetails } from "./Pages/ProductDetails"
+import { Login } from "./Pages/Login"
+import { Register } from "./Pages/Register"
+import { Footer } from "./Components/Footer"
+import { Cart } from "./Pages/Cart"
 
 function App() {
 
@@ -26,14 +30,20 @@ function App() {
 export default App
 
 function AppWrapper() {
+  const location = useLocation();
+  const hideLayout = ["/login", "/register", "/notfound"];
+  const shouldHide = hideLayout.includes(location.pathname);
   return (
     <>
-      <Navbar />
+      {!shouldHide && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/productDetails" element={<ProductDetails />} />
         <Route path="/blogdetails" element={<BlogDetails />} />
         <Route path="/blogs" element={<Blogs />} />
@@ -43,6 +53,7 @@ function AppWrapper() {
         <Route path="/terms" element={<Terms />} />
       </Routes>
 
+      {!shouldHide && <Footer />}
 
 
     </>

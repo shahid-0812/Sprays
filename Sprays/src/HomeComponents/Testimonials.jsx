@@ -79,15 +79,14 @@ export const Testimonials = () => {
                 >
                     {Reviws.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <div className="flex items-center p-5 w-full rounded-3xl border border-[#e2e2e2]">
-                                <img src={item.img} alt="" />
-                                <div className="flex flex-col gap-1 w-full">
-                                    <div className="flex  justify-between items-center">
+                            <div className="flex items-center p-5 w-full rounded-3xl border border-[#e2e2e2] max-sm:gap-3">
+                                <img src={item.img} alt="" className='w-full h-full object-cover max-sm:w-15'/>
+                                <div className="flex flex-col gap-1 w-full ">
+                                    <div className="flex  justify-between items-center max-sm:flex-col max-sm:items-start">
                                         <h1 className='text-xl font-medium mitr'>
                                             {item.title}
                                         </h1>
                                         <div className="flex gap-2 items-center">
-
                                             <div className="flex text-xs gap-0.5 items-center text-black">
                                                 <i className="bi bi-star-fill"></i>
                                                 <i className="bi bi-star-fill"></i>

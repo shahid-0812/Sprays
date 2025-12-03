@@ -35,7 +35,7 @@ export const Shop = () => {
                     <div className="w-[30%] text-2xl font-semibold border-r border-black/30 pb-3 max-sm:hidden">Filters</div>
                     <div className="w-[70%] text-sm flex justify-between items-center px-5 max-sm:w-full max-sm:px-2">
                         <span className="font-semibold max-sm:hidden">Home / Bestseller</span>
-                        <span onClick={() => setFilterOpen(!filterOpen)} className='border px-1 text-xl rounded-sm hidden max-sm:flex'>
+                        <span onClick={() => setFilterOpen(!filterOpen)} className='border px-1 my-3 text-xl rounded-sm hidden max-sm:flex'>
                             <i className="bi bi-filter"></i>
                         </span>
                         <span className='font-semibold'>
@@ -184,7 +184,7 @@ export const Shop = () => {
                         ${filterOpen ? "translate-x-0" : "-translate-x-full"} lg:hidden`}
                     >
                         <div className="flex flex-col h-full relative gap-5">
-                            <div className="flex justify-between items-center bg-[#63c0ee] p-4 w-fit text-white">
+                            <div className="flex justify-between items-center bg-black p-4 w-fit text-white">
                                 <i
                                     onClick={() => setFilterOpen(false)}
                                     className="bi bi-x-lg self-end  cursor-pointer"
@@ -393,6 +393,10 @@ export const Shop = () => {
                                         </div>
                                     </motion.div>
                                 }
+                            </div>
+                            <div className="flex items-center px-5 gap-3">
+                                <button className='bg-black text-white rounded-full px-4 py-3 w-full'>Remove All</button>
+                                <button className='bg-black text-white rounded-full px-4 py-3 w-full'>Apply</button>
                             </div>
                         </div>
                     </div>

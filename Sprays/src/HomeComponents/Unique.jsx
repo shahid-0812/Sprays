@@ -59,6 +59,17 @@ export const Unique = () => {
                             swiper.params.navigation.prevEl = prevRef.current;
                             swiper.params.navigation.nextEl = nextRef.current;
                         }}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                            },
+                            1025: {
+                                slidesPerView: 2,
+                            },
+                        }}
                     >
                         {Sprays.map((spray) => (
                             <SwiperSlide key={spray.id}>

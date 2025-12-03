@@ -1,5 +1,6 @@
 import React from 'react'
 import { CtaButtonBlack } from '../Components/CtaButtonBlack';
+import { Link } from 'react-router-dom';
 
 export const Blogs = () => {
     const Card = [
@@ -25,12 +26,12 @@ export const Blogs = () => {
         },
     ];
     return (
-        <div className='max-w-6xl mx-auto w-full py-15 flex flex-col gap-5'>
+        <div className='max-w-6xl mx-auto w-full py-15 flex flex-col gap-5 max-lg:px-5'>
             <h1 className='mitr text-5xl font-medium'>News</h1>
             <div className="flex flex-wrap gap-5">
                 {Card.map((item) => (
 
-                    <div key={item.id} className="flex flex-col rounded-2xl border overflow-hidden w-[23%] max-lg:w-[32%] max-sm:w-full">
+                    <Link to="/blogDetails" key={item.id} className="flex flex-col rounded-2xl border overflow-hidden w-[23%] max-lg:w-[32%] max-sm:w-full">
                         <div>
                             <img src={`/images/image-${item.id}.webp`} className='w-full h-full object-cover' alt="" />
                         </div>
@@ -47,7 +48,7 @@ export const Blogs = () => {
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
                 ))}
             </div>

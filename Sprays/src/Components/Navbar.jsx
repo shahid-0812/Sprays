@@ -9,7 +9,7 @@ export const Navbar = () => {
     const hover = 'hover:text-[#8b8b8b] transition semibold';
 
     return (
-        <div className='bg-black w-full flex flex-col sticky top-0 z-10 max-lg:px-5'>
+        <div className='bg-black w-full flex flex-col sticky top-0 z-10 max-lg:px-2'>
             <div className="max-w-6xl mx-auto w-full flex py-3 text-white items-center justify-between border-b border-white max-sm:hidden">
                 <span className='font-medium'>
                     Monday - Friday 8:00 AM - 9:00 PM

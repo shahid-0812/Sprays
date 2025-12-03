@@ -3,26 +3,26 @@ import { CtaButton } from '../Components/CtaButton'
 
 export const Features = () => {
     return (
-        <div className='flex items-center gap-5 justify-between max-w-6xl mx-auto w-full py-15 max-lg:px-5'>
-            <div className="flex flex-col  gap-3 flex-1 w-full items-end">
+        <div className='flex items-center gap-5 justify-between max-w-6xl mx-auto w-full py-15 max-lg:px-5 max-sm:flex-col'>
+            <div className="flex flex-col  gap-3 flex-1 w-full items-end max-sm:items-center max-sm:text-center">
                 <h1 className='text-xl font-bold '>
                     Power, and Practicality<br />
                     <span className='font-light'>
                         Manufacturing Processes
                     </span>
                 </h1>
-                <span className='text-right'>
+                <span className='text-right max-sm:text-center'>
                     Sprays, in their multifaceted forms, represent a diverse range of applications across industries, sciences, arts, and daily life.
                 </span>
                 <CtaButton
                     text='Check More Products'
                 />
             </div>
-            <div className="flex flex-col  gap-3 flex-1 w-full items-end">
+            <div className="flex flex-col  gap-3 flex-1 w-full items-end ">
                 <img src="/images/chocolate4.webp" alt="" />
 
             </div>
-            <div className="flex flex-col  gap-3 flex-1 w-full ">
+            <div className="flex flex-col  gap-3 flex-1 w-full max-sm:items-center max-sm:text-center">
                 <h1 className='text-xl font-bold '>
                     The Artistry of Atomization<br />
                     <span className='font-light'>

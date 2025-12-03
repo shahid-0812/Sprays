@@ -12,7 +12,7 @@ export const BlogDetails = () => {
                     height: "400px",
                 }}
 
-                className='flex items-center max-lg:px-5'>
+                className='flex items-center max-lg:px-5 '>
                 <div className="max-w-6xl mx-auto w-full flex flex-col justify-center gap-5">
 
                     <div className="flex items-center gap-2 text-white">
@@ -36,15 +36,15 @@ export const BlogDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex max-w-6xl mx-auto w-full gap-10 py-15 max-lg:px-5">
-                <div className="flex flex-col gap-10 w-[70%]">
+            <div className="flex max-w-6xl mx-auto w-full gap-10 py-15 max-lg:px-5 max-sm:flex-col">
+                <div className="flex flex-col gap-10 w-[70%] max-sm:w-full">
 
                     <div className="flex flex-col gap-5">
-                        <span className="text-5xl font-bold">
+                        <span className="text-5xl font-bold max-sm:text-2xl">
                             Engel & Volkers Real Estate
                         </span>
                         <img src="/images/image-1.webp" alt="" />
-                        <div className="flex items-center gap-8">
+                        <div className="flex items-center gap-8 max-sm:gap-2 max-sm:flex-wrap">
                             <span className='font-bold text-lg'>WorkDo</span>
                             <span className="font-semibold text-sm">Category: news</span>
                             <span className="font-semibold text-sm">Date: March 20, 2023</span>
@@ -76,7 +76,7 @@ export const BlogDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-10 w-[30%]">
+                <div className="flex flex-col gap-10 w-[30%] max-sm:w-full">
                     <span className='font-semibold text-3xl'>Related articles</span>
                     <div className="flex flex-col gap-3">
                         <div className="flex flex-col rounded-2xl group">

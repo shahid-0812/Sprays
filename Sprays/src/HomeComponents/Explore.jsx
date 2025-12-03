@@ -14,11 +14,11 @@ export const Explore = () => {
 
     return (
         <div className='max-w-6xl w-full mx-auto py-15 flex flex-col gap-10 max-lg:px-5'>
-            <div className="w-full flex justify-between items-center">
+            <div className="w-full flex justify-between items-center max-sm:flex-col max-sm:items-start max-sm:gap-3">
                 <h1 className='font-medium text-4xl mitr max-lg:text-2xl'>Exploring the<br />
                     <span className='font-light whitsp'> Versatility of Sprays</span>
                 </h1>
-                <div className="flex gap-2 whitespace-nowrap">
+                <div className="flex gap-2 whitespace-nowrap max-sm:flex-wrap">
                     <CtaButton text='Fragrances' />
                     <CtaButton text='Unisex Perfume' />
                     <CtaButton text='Solid Perfume' />
