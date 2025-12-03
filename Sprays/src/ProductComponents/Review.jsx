@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 export const Review = () => {
     const [showReviewForm, setShowReviewForm] = useState(false);
     return (
-        <div className='max-w-6xl mx-auto w-full flex flex-col items-center gap-5  py-15'>
+        <div className='max-w-6xl mx-auto w-full flex flex-col items-center gap-5  py-15 max-lg:px-5'>
 
             <div className=" flex items-center gap-30 max-lg:flex-col max-lg:gap-5 w-full  ">
                 <div className="flex flex-col text-sm gap-2  w-full  ">
@@ -124,8 +124,8 @@ export const Review = () => {
                         How we use your data: We’ll only contact you about the review you left, and only if necessary. By submitting your review, you agree to Judge.me’s terms, privacy and content policies.
                     </span>
                     <div className="flex gap-3">
-                        <button onClick={() => setShowReviewForm(!showReviewForm)} className='border-[#63c0ee] border-2 hover:opacity-70 transition text-[#63c0ee] mr-bold px-12 py-2'>Cancel review</button>
-                        <button onClick={() => setShowReviewForm(!showReviewForm)} className='bg-[#63c0ee] border-2 hover:opacity-70 transition text-white mr-bold px-12 py-2'>Submit review</button>
+                        <button onClick={() => setShowReviewForm(!showReviewForm)} className='border-black border-2 hover:opacity-70 transition text-black mr-bold px-12 py-2'>Cancel review</button>
+                        <button onClick={() => setShowReviewForm(!showReviewForm)} className='bg-black border-2 hover:opacity-70 transition text-white mr-bold px-12 py-2'>Submit review</button>
                     </div>
                 </div>
             </motion.div>}

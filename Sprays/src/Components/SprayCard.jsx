@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { CtaButton } from './CtaButton'
+import { Link } from 'react-router-dom';
 
 export const SprayCard = ({ img, name, price, img2 }) => {
     const [isImg, setIsImg] = useState(false);
     return (
-        <div onMouseEnter={() => setIsImg(true)} onMouseLeave={() => setIsImg(false)} className="flex flex-col   bg-white border border-black rounded-lg text-black overflow-hidden cursor-pointer">
+        <Link to='/productDetails' onMouseEnter={() => setIsImg(true)} onMouseLeave={() => setIsImg(false)} className="flex flex-col   bg-white border border-black rounded-lg text-black overflow-hidden cursor-pointer">
             <div className='relative p-5'>
 
                 <span className='text-xs rounded-full px-2 py-1 border absolute top-3  left-3'>20%</span>
@@ -47,6 +48,6 @@ export const SprayCard = ({ img, name, price, img2 }) => {
                     <CtaButton text='Add to Cart' />
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }

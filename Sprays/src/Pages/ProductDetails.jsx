@@ -3,11 +3,13 @@ import { Product } from '../ProductComponents/Product'
 import { Review } from '../ProductComponents/Review'
 import { Testimonials } from '../HomeComponents/Testimonials'
 import { Mastery } from '../ProductComponents/Mastery'
+import { Recents } from '../ProductComponents/Recents'
 
 export const ProductDetails = () => {
     return (
         <>
             <Product />
+            <Recents />
             <Review />
             <Testimonials />
             <Mastery />

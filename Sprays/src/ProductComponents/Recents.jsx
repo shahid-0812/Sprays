@@ -7,12 +7,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Sprays } from '../Components/AllProducts';
 
-export const Mastery = () => {
+export const Recents = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     return (
         <div className='max-w-6xl mx-auto w-full flex flex-col gap-5 py-10'>
-            <h1 className='mitr font-medium text-4xl max-lg:px-5 max-lg:text-3xl'>Transforming Surfaces with Spray Mastery</h1>
+            <h1 className='mitr font-medium text-4xl max-lg:px-5 max-lg:text-3xl'>Recently Viewed Products</h1>
             <div className="relative group">
                 <div className="flex absolute px-5 z-10 justify-between top-1/2 -translate-y-1/2 w-full gap-3 mb-4 opacity-0 group-hover:opacity-100 transition duration-300">
                     <button ref={prevRef} className="cursor-pointer px-3 py-2 bg-black rounded-lg text-white hover:text-white shadow hover:opacity-80  transition">

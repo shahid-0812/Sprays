@@ -6,6 +6,7 @@ export const Navbar = () => {
     const [curOpen, setCurOpen] = useState(false);
     const [pageOpen, setPageOpen] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [userOpen, setUserOpen] = useState(false);
     const hover = 'hover:text-[#8b8b8b] transition semibold';
 
     return (
@@ -123,7 +124,7 @@ export const Navbar = () => {
                                     <NavLink to='/contact' className={hover}>
                                         Contact
                                     </NavLink>
-                                    <NavLink to="/about"  className={hover}>
+                                    <NavLink to="/about" className={hover}>
                                         About Us
                                     </NavLink>
                                     <NavLink to='/FAQs' className={hover}>
@@ -155,12 +156,39 @@ export const Navbar = () => {
                     <i className="bi bi-list" onClick={() => setMenuOpen(!menuOpen)}></i>
                 </div>
                 <div className="flex items-center gap-3 max-sm:hidden">
-                    <div className="px-3 py-2 bg-white rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="22" viewBox="0 0 16 22" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3699 21.0448H4.60183C4.11758 21.0448 3.72502 20.6522 3.72502 20.168C3.72502 19.6837 4.11758 19.2912 4.60183 19.2912H13.3699C13.8542 19.2912 14.2468 18.8986 14.2468 18.4143V14.7756C14.2026 14.2836 13.9075 13.8492 13.4664 13.627C10.0296 12.2394 6.18853 12.2394 2.75176 13.627C2.31062 13.8492 2.01554 14.2836 1.9714 14.7756V20.168C1.9714 20.6522 1.57883 21.0448 1.09459 21.0448C0.610335 21.0448 0.217773 20.6522 0.217773 20.168V14.7756C0.256548 13.5653 0.986136 12.4845 2.09415 11.9961C5.95255 10.4369 10.2656 10.4369 14.124 11.9961C15.232 12.4845 15.9616 13.5653 16.0004 14.7756V18.4143C16.0004 19.8671 14.8227 21.0448 13.3699 21.0448ZM12.493 4.38406C12.493 1.96281 10.5302 0 8.10892 0C5.68767 0 3.72486 1.96281 3.72486 4.38406C3.72486 6.80531 5.68767 8.76812 8.10892 8.76812C10.5302 8.76812 12.493 6.80531 12.493 4.38406ZM10.7393 4.38483C10.7393 5.83758 9.56159 7.01526 8.10884 7.01526C6.6561 7.01526 5.47841 5.83758 5.47841 4.38483C5.47841 2.93208 6.6561 1.75439 8.10884 1.75439C9.56159 1.75439 10.7393 2.93208 10.7393 4.38483Z" fill="#183A40"></path>
-                        </svg>
+                    <div className="flex flex-col gap-3 relative">
+                        <div onClick={() => setUserOpen(!userOpen)} className="px-3 py-2 bg-white rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="22" viewBox="0 0 16 22" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3699 21.0448H4.60183C4.11758 21.0448 3.72502 20.6522 3.72502 20.168C3.72502 19.6837 4.11758 19.2912 4.60183 19.2912H13.3699C13.8542 19.2912 14.2468 18.8986 14.2468 18.4143V14.7756C14.2026 14.2836 13.9075 13.8492 13.4664 13.627C10.0296 12.2394 6.18853 12.2394 2.75176 13.627C2.31062 13.8492 2.01554 14.2836 1.9714 14.7756V20.168C1.9714 20.6522 1.57883 21.0448 1.09459 21.0448C0.610335 21.0448 0.217773 20.6522 0.217773 20.168V14.7756C0.256548 13.5653 0.986136 12.4845 2.09415 11.9961C5.95255 10.4369 10.2656 10.4369 14.124 11.9961C15.232 12.4845 15.9616 13.5653 16.0004 14.7756V18.4143C16.0004 19.8671 14.8227 21.0448 13.3699 21.0448ZM12.493 4.38406C12.493 1.96281 10.5302 0 8.10892 0C5.68767 0 3.72486 1.96281 3.72486 4.38406C3.72486 6.80531 5.68767 8.76812 8.10892 8.76812C10.5302 8.76812 12.493 6.80531 12.493 4.38406ZM10.7393 4.38483C10.7393 5.83758 9.56159 7.01526 8.10884 7.01526C6.6561 7.01526 5.47841 5.83758 5.47841 4.38483C5.47841 2.93208 6.6561 1.75439 8.10884 1.75439C9.56159 1.75439 10.7393 2.93208 10.7393 4.38483Z" fill="#183A40"></path>
+                            </svg>
+                        </div>
+                        <AnimatePresence>
+                            {userOpen && <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{
+                                    duration: 0.4,
+                                    ease: [0.2, 0, 0.2, 1]  // fast start, slow end
+                                }}
+                                className="absolute -left-15 -translate-x-1/2 bg-white px-5 text-black  shadow-lg capitalize w-50 mt-12  flex flex-col gap-1 py-3 overflow-hidden"
+                            >
+                                <NavLink to='/login' className={hover}>
+                                    Login
+                                </NavLink>
+                                <NavLink to="/register" className={hover}>
+                                    Create Account
+                                </NavLink>
+                                <NavLink to='/wishlist' className={hover}>
+                                    Wishlist
+                                </NavLink>
+                                <NavLink to='/wishlist' className={hover}>
+                                    Compare
+                                </NavLink>
+                            </motion.div>
+                            }
+                        </AnimatePresence>
                     </div>
-
                     <button className='flex items-center gap-3 rounded-full px-5 py-2 border'>
                         <i className="bi bi-cart"></i>
                         <span> $0.00</span>

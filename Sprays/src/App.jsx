@@ -15,6 +15,7 @@ import { Login } from "./Pages/Login"
 import { Register } from "./Pages/Register"
 import { Footer } from "./Components/Footer"
 import { Cart } from "./Pages/Cart"
+import { WishList } from "./Pages/Wishlist"
 
 function App() {
 
@@ -44,6 +45,7 @@ function AppWrapper() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/wishlist" element={<WishList />} />
         <Route path="/productDetails" element={<ProductDetails />} />
         <Route path="/blogdetails" element={<BlogDetails />} />
         <Route path="/blogs" element={<Blogs />} />
